@@ -9,19 +9,7 @@ import carAvatar from '../../../public/car_avatar1.png';
 
 import  styles from   './Home.module.css';
 
-/*
-*******************************************
-1.  Os padding left do Box HStack deverão ser
-  estilizados com CSS, pois ao configurar os mesmos
-  usando o proprio chakra, enquanto a responsividade
-  fica boa na full screen ( PC ) na tela do IPAD
-  fica ruim, e quando é arrumando na tela do IPAD o
-  contrário ocorre
 
-2. dar um jeito de colocar o código do Home.module.css no theme.ts
-
-*******************************************
-*/
 interface CarsProps{
   carItem: ReactNode;
 }
@@ -62,7 +50,6 @@ export function CarsCarousel(){
   return(
     <Box
       w="100%"
-
     >
 
         <Carousel

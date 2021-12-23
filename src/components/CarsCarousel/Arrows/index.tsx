@@ -11,8 +11,6 @@ export const Arrows = ({ classProps, onClick}: ArrowsProps) => {
   const [isMouseEnterActive, setIsMouseEnterActive] = useState(false)
 
   const handleClick = () => {
-    console.log("O left button foi clicado, volta ae fio... função:")
-    console.log(onClick);
      onClick();
   }
 
