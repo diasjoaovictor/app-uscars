@@ -1,10 +1,10 @@
 import { Text, Image, Flex, HStack, Box, Stack as ContainerStack, Input, Icon, VStack } from '@chakra-ui/react';
-import { Header } from '../components/Header/index';
+import { Header } from '../components/dashboard/Header/index';
 
-import { Menu } from '../components/Menu';
-import { SearchBox } from '../components/SearchBox';
-import { Banner } from '../components/Banner';
-import { CarsCarousel } from '../components/CarsCarousel';
+import { Menu } from '../components/dashboard/Menu';
+import { SearchBox } from '../components/dashboard/SearchBox';
+import { Banner } from '../components/dashboard/Banner';
+import { CarsCarousel } from '../components/dashboard/CarsCarousel';
 
 import 'react-multi-carousel/lib/styles.css';
 

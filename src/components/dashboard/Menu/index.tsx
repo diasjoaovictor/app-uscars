@@ -1,10 +1,10 @@
 import { Flex, HStack, Image, Text, useBreakpointValue, IconButton, Icon } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';
-import { useSidebarDrawer } from '../../hooks/useSidebar';
+import { useSidebarDrawer } from '../../../hooks/useSidebar';
 
-import logo from '../../../public/logo.svg';
-import profile from '../../../public/profile.svg';
-import exit from '../../../public/exit.svg';
+import logo from '../../../../public/logo.svg';
+import profile from '../../../../public/profile.svg';
+import exit from '../../../../public/exit.svg';
 
 
 export function Menu(){

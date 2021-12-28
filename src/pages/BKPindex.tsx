@@ -1,19 +1,4 @@
-import { Image,
-    Icon,
-    Stack,
-    Center,
-    Flex,
-    Button,
-    HStack,
-    Divider,
-    Box,
-    Stack as BodyStack,
-    VStack,
-    Text,
-    Input,
-    InputGroup,
-    InputLeftElement
-        } from '@chakra-ui/react';
+import { Image, Icon, Stack, Center, Flex, Button, HStack, Divider,  Box, Stack as BodyStack, VStack, Text, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 // import router from 'next/router';
 import { AiFillGoogleCircle } from 'react-icons/ai';
 import blue_logo from '../../public/blue_logo.png';
@@ -24,15 +9,19 @@ export default function Sigin(){
   // }
   return(
   <>
-    <Stack
+    <Box
+    as="html"
     bgColor="rgba(229, 229, 229, 0.5) "
     w="100%"
-    spacing={1}
-    h={["100vh"]}
+    h="100vh"
+    position="fixed"
     >
     <Box
+      w={["100vh", "100%"]}
+      h={["200vh", "100vh"]}
     >
       <BodyStack
+      spacing={20}
       >
         <Box>
           <Center
@@ -42,7 +31,7 @@ export default function Sigin(){
             borderBottom="10px"
             bgColor="#fff"
           >
-            <Image pt={5} src={blue_logo.src} />
+            <Image pt={6} src={blue_logo.src} />
           </Center>
           <Center
             pt={40}
@@ -59,8 +48,8 @@ export default function Sigin(){
                     bgColor="#fff"
                     h="100%"
                     w="100%"
+                    p="2px"
                     spacing={39}
-
                   >
                       <Input
                         variant="flushed"
@@ -147,12 +136,22 @@ export default function Sigin(){
               </VStack>
             </Box>
           </Center>
+
         </Box>
+        
+        <Center
+        width="100%"
+        h="100px"
+        boxShadow="0px 2.5px 3px 1px rgba(0, 0, 0, 0.4)"
+        borderBottom="10px"
+        bgColor="#fff"
+        >
+        <Image pt={6} src={blue_logo.src} />
+        </Center>
 
         </BodyStack>
     </Box>
-    
-    </Stack>
+    </Box>
     </>
   )
 }

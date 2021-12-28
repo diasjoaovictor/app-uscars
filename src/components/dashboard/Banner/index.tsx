@@ -1,5 +1,5 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
-import car from '../../../public/car.png';
+import car from '../../../../public/car.png';
 
 export function Banner(){
   return(

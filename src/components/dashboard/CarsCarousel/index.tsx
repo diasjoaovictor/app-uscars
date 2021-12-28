@@ -5,7 +5,7 @@ import { useState, useEffect, ReactNode } from 'react';
 import { CarItem } from './CarItem';
 import { Arrows } from './Arrows';
 
-import carAvatar from '../../../public/car_avatar1.png';
+import carAvatar from '../../../../public/car_avatar1.png';
 
 import  styles from   './Home.module.css';
 
