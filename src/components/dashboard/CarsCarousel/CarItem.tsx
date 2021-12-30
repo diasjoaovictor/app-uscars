@@ -2,21 +2,14 @@ import { Box, HStack, Image, VStack, Text } from '@chakra-ui/react';
 
 interface CarItemProps{
   carImage: string;
-  key: number
 }
 
-export function CarItem({ carImage, key }: CarItemProps){
+export function CarItem({ carImage }: CarItemProps){
   return(
     <>
-    <Box flexDirection="row" pb={10} key={key} >
+    <Box flexDirection="row" pb={10} pl={2} >
         <VStack >
-        {
-          key == 1
-          ?
-          <Image  src={carImage}/>
-          :
-          <Image pl={"20px"} src={carImage}/>
-        }
+          <Image src={carImage}/>
           <Text pb={10}>Text</Text>
         </VStack>
     </Box>

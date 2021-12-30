@@ -15,7 +15,7 @@ export function Banner(){
         bg={`url("${car.src}")`}
         justifyContent="center"
         bgSize="100%"
-        maxW="1400px"
+        maxW="2000px"
         maxH="100%"
         backgroundRepeat="no-repeat"
 

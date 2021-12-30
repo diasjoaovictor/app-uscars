@@ -17,11 +17,10 @@ export function CarsCarousel(){
     const [cars, setCars] = useState<CarsProps[]>([])
     useEffect(() => {
       let carsArray = [];
-      for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={i} carImage={carAvatar.src}/>);
+      for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={`${i}`} carImage={carAvatar.src}/>);
       setCars(carsArray);
 
     }, [])
-
 
     const leftArrowClass="react-multiple-carousel__arrow react-multiple-carousel__arrow--left";
     const rightArrowClass="react-multiple-carousel__arrow react-multiple-carousel__arrow--right";
@@ -30,18 +29,18 @@ export function CarsCarousel(){
 
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 10
+      items: cars.length
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 6
+      items: 10
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 4
     },
     mobile: {
-      breakpoint: { max: 400, min: 20 },
+      breakpoint: { max: 380, min: 20 },
       items: 3
     }
   };
@@ -49,9 +48,7 @@ export function CarsCarousel(){
 
 
   return(
-    <Center
-      as="div"
-      w="100%"
+    <div
     >
 
         <Carousel
@@ -69,14 +66,13 @@ export function CarsCarousel(){
           itemClass="carousel-item-padding-40-px"
           customLeftArrow={<Arrows onClick={() => this.onclick} classProps={leftArrowClass} />}
           customRightArrow={<Arrows onClick={() => this.onclick} classProps={rightArrowClass} />}
-
         >
         {cars.map(car => {
           return car
         })}
         </Carousel>
 
-      </Center>
+      </div>
 
   )
 }
