@@ -40,8 +40,8 @@ export function CarsCarousel(){
       items: 4
     },
     mobile: {
-      breakpoint: { max: 380, min: 20 },
-      items: 3
+      breakpoint: { max: 400, min: 20 },
+      items: 1
     }
   };
 
