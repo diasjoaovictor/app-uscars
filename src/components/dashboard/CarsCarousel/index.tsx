@@ -48,8 +48,6 @@ export function CarsCarousel(){
 
 
   return(
-    <div
-    >
 
         <Carousel
           className={styles.carouselContainer}
@@ -72,7 +70,6 @@ export function CarsCarousel(){
         })}
         </Carousel>
 
-      </div>
 
   )
 }
