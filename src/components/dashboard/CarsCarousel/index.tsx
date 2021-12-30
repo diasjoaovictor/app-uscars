@@ -37,7 +37,7 @@ export function CarsCarousel(){
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 4
     },
     mobile: {
       breakpoint: { max: 400, min: 20 },
