@@ -49,11 +49,9 @@ export function CarsCarousel(){
 
 
   return(
-    <div
-      style={{
-        width: "100%",
-        alignSelf: "center"
-      }}
+    <Center
+      as="div"
+      w="100%"
     >
 
         <Carousel
@@ -78,7 +76,7 @@ export function CarsCarousel(){
         })}
         </Carousel>
 
-      </div>
+      </Center>
 
   )
 }
