@@ -1,4 +1,4 @@
-import { Text, Image, Flex, HStack, Box, Stack as ContainerStack, Input, Icon, VStack } from '@chakra-ui/react';
+import { Text, Image, Flex, Center, HStack, Box, Stack as ContainerStack, Input, Icon, VStack } from '@chakra-ui/react';
 import { Header } from '../components/dashboard/Header/index';
 
 import { Menu } from '../components/dashboard/Menu';
