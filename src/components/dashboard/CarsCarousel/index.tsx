@@ -1,4 +1,4 @@
-import { Box} from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 import Carousel from "react-multi-carousel";
 import { useState, useEffect, ReactNode } from 'react';
 
@@ -17,7 +17,7 @@ export function CarsCarousel(){
     const [cars, setCars] = useState<CarsProps[]>([])
     useEffect(() => {
       let carsArray = [];
-      for(let i = 0; i < 6; i++) carsArray.push(<CarItem carImage={carAvatar.src}/>);
+      for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={i} carImage={carAvatar.src}/>);
       setCars(carsArray);
 
     }, [])
@@ -27,28 +27,29 @@ export function CarsCarousel(){
     const rightArrowClass="react-multiple-carousel__arrow react-multiple-carousel__arrow--right";
 
     const responsive = {
+
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 10
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 4
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+      breakpoint: { max: 400, min: 20 },
+      items: 3
     }
   };
 
 
 
   return(
-    <Box
+    <Center
       w="100%"
     >
 
@@ -64,6 +65,7 @@ export function CarsCarousel(){
           transitionDuration={500}
           containerClass="carousel-container"
           dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
           customLeftArrow={<Arrows onClick={() => this.onclick} classProps={leftArrowClass} />}
           customRightArrow={<Arrows onClick={() => this.onclick} classProps={rightArrowClass} />}
 
@@ -73,7 +75,7 @@ export function CarsCarousel(){
         })}
         </Carousel>
 
-      </Box>
+      </Center>
 
   )
 }
