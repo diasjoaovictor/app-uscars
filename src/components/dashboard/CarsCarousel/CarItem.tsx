@@ -8,7 +8,7 @@ export function CarItem({ carImage }: CarItemProps){
   return(
     <>
     <Box flexDirection="row" pb={10} pl={2} >
-        <VStack >
+        <VStack name="util_stack">
           <Image src={carImage}/>
           <Text pb={10}>Text</Text>
         </VStack>
