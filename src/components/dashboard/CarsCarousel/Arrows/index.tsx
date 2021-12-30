@@ -20,7 +20,7 @@ export const Arrows = ({ classProps, onClick}: ArrowsProps) => {
         position="absolute"
         onClick={handleClick}
         borderRadius={20}
-        mt="100px"
+        mt={[,,"100px"]}
         onMouseEnter={() => setIsMouseEnterActive(!isMouseEnterActive)}
         onMouseOut={() => setIsMouseEnterActive(!isMouseEnterActive)}
         backgroundColor={ isMouseEnterActive ? "#00008B !important" : "gray !important" }
