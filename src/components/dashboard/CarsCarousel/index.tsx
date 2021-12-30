@@ -41,7 +41,7 @@ export function CarsCarousel(){
     },
     mobile: {
       breakpoint: { max: 400, min: 20 },
-      items: 1
+      items: 2
     }
   };
 
