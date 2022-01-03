@@ -10,10 +10,13 @@ import { Image,
   VStack,
   Text,
   Input,
-  InputGroup
+  InputGroup,
+  InputRightElement
 } from '@chakra-ui/react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
-import { useEffect } from 'react';
+import {  SearchIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 
 import { Footer } from './Footer/index';
@@ -21,11 +24,23 @@ import { Footer } from './Footer/index';
 import blue_logo from '../../../public/blue_logo.png';
 
 export function LoginPage(){
+  const [type, setType] = useState('password')
+  const [visible, setVisible] = useState(<ViewOffIcon />)
   const router = useRouter();
   useEffect(() => {
      document.body.style.backgroundColor = 'rgba(229, 229, 229, 0.5)';
   })
   const redirect = () => router.push('/');
+  const changeVisibility = () => {
+    if(type === 'password'){
+      setType('text');
+      setVisible(<ViewIcon h="40px" />);
+    }else{
+      setType('password');
+      setVisible(<ViewOffIcon h="40px" />);
+    }
+    document.getElementById('txtPassowrd').focus();
+  }
   return(
     <>
     <Stack
@@ -91,8 +106,14 @@ export function LoginPage(){
                       borderColor="#262626"
                       fontSize={30}
                       placeholder="Password: "
-                      type="password"
+                      type={type}
+                      id="txtPassowrd"
                       />
+                        <InputRightElement
+                          onClick={() => changeVisibility()}
+                          children={visible}
+                          cursor="pointer"
+                        />
                     <Center
                       padding="1%"
                       >
