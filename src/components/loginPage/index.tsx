@@ -14,7 +14,7 @@ import { Image,
   InputRightElement
 } from '@chakra-ui/react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
-import {  SearchIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
