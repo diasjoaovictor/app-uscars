@@ -6,16 +6,12 @@ import logo from '../../../../public/logo.svg';
 import profile from '../../../../public/profile.svg';
 import exit from '../../../../public/exit.svg';
 
-
 export function Menu(){
   const { onOpen } = useSidebarDrawer();
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
   })
-
-
-
 
   return(
 

@@ -13,15 +13,26 @@ import { Image,
   InputGroup
 } from '@chakra-ui/react';
 import { AiFillGoogleCircle } from 'react-icons/ai';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router'
+
+import { Footer } from './Footer/index';
+
 import blue_logo from '../../../public/blue_logo.png';
 
 export function LoginPage(){
+  const router = useRouter();
+  useEffect(() => {
+     document.body.style.backgroundColor = 'rgba(229, 229, 229, 0.5)';
+  })
+  const redirect = () => router.push('/');
   return(
+    <>
     <Stack
-      bgColor="rgba(229, 229, 229, 0.5) "
       w="100%"
-      spacing={1}
-      h={["100vh"]}
+      justifyContent="space-between"
+      name=""
+      h="100vh"
       >
       <Box
         >
@@ -30,15 +41,15 @@ export function LoginPage(){
           <Box>
             <Center
               width="100%"
-              h="100px"
+              h="80px"
               boxShadow="0px 2.5px 3px 1px rgba(0, 0, 0, 0.4)"
               borderBottom="10px"
               bgColor="#fff"
               >
-              <Image pt={5} src={blue_logo.src} />
+              <Image pt={5} h="150%"  src={blue_logo.src} />
             </Center>
             <Center
-              pt={40}
+              pt={30}
               >
               <Box
                 w="500px"
@@ -79,16 +90,18 @@ export function LoginPage(){
                       fontWeight="2"
                       borderColor="#262626"
                       fontSize={30}
-                      placeholder="Senha: "/>
+                      placeholder="Password: "
+                      type="password"
+                      />
                     <Center
-                      padding="0%"
+                      padding="1%"
                       >
                       <Text
                         color="#C3C3C3"
                         cursor="pointer"
                         fontFamily="Ubuntu"
                         >
-                        Esqueceu a senha?
+                          Forgot password?
 
                           </Text>
                           </Center>
@@ -102,6 +115,7 @@ export function LoginPage(){
                             fontWeight="10px"
                             boxShadow="2px 4px 4px rgba(0, 0, 0, 0.25)"
                             fontFamily="Ubuntu"
+                            onClick={() => redirect()}
                             >
                             Login
                           </Button>
@@ -109,7 +123,13 @@ export function LoginPage(){
                             <HStack
                               spacing="35px"
                               >
-                              <Divider orientation='horizontal' w="180px" border="1px solid black !important"  color="#b2342a" bgColor="#b2342a" />
+                              <Divider
+                                orientation='horizontal'
+                                w="180px"
+                                border="1px solid black !important"
+                                color="#b2342a"
+                                bgColor="#b2342a"
+                              />
                               <Text
                                 color="#c3c3c3"
                                 fontSize="20px"
@@ -117,7 +137,13 @@ export function LoginPage(){
                                 >
                                 ou
                               </Text>
-                              <Divider orientation='horizontal' w="180px" border="1px solid black !important"  color="#b2342a" bgColor="#b2342a" />
+                              <Divider
+                                orientation='horizontal'
+                                w="180px"
+                                border="1px solid black !important"
+                                color="#b2342a"
+                                bgColor="#b2342a"
+                              />
                             </HStack>
                             <Button
                               colorScheme="red"
@@ -147,6 +173,8 @@ export function LoginPage(){
               </BodyStack>
             </Box>
 
+            <Footer />
           </Stack>
+          </>
   )
 }

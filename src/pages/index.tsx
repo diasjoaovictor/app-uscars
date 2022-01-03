@@ -1,14 +1,22 @@
-import { Box, Text, Center, Image } from '@chakra-ui/react';
-import { LoginPage } from '../components/loginPage/index';
-import blue_logo from '../../public/blue_logo.png';
-export default function Sigin(){
+import {  Stack as ContainerStack } from '@chakra-ui/react';
+import { Header } from '../components/dashboard/Header/index';
 
-  // const redirect = () => {
-  //   router.push('/dashboard');
-  // }
-  return(
-    <>
-      <LoginPage />
-    </>
+import { SearchBox } from '../components/dashboard/SearchBox';
+import { Banner } from '../components/dashboard/Banner';
+import { CarsCarousel } from '../components/dashboard/CarsCarousel';
+
+import 'react-multi-carousel/lib/styles.css';
+
+
+export default function Dashboard(){
+
+
+  return (
+    <ContainerStack  spacing={10}>
+      <Header />
+      <SearchBox />
+      <Banner />
+      <CarsCarousel />
+    </ContainerStack>
   )
 }

@@ -1,12 +1,12 @@
-import { Box, Center } from '@chakra-ui/react';
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { useState, useEffect, ReactNode } from 'react';
+
 import { CarItem } from './CarItem';
 import { Arrows } from './Arrows';
 
 import carAvatar from '../../../../public/car_avatar1.png';
 
+import "react-multi-carousel/lib/styles.css";
 import  styles from   './Home.module.css';
 
 

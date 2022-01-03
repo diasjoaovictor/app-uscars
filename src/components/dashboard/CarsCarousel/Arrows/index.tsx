@@ -1,5 +1,5 @@
 import { Button  } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface ArrowsProps{
   onClick: () => void;
