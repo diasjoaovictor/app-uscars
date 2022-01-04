@@ -2,7 +2,7 @@ import { Flex, Box, Text } from '@chakra-ui/react';
 import car from '../../../../public/car.png';
 
 export function Banner(){
-  return(
+  return( 
     <Flex
       w="100%"
       h={["100px", "150px", "250px", "300px","500px"]}
