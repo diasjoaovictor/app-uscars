@@ -1,9 +1,9 @@
 import {  Stack as ContainerStack } from '@chakra-ui/react';
-import { Header } from '../components/dashboard/Header/index';
+import { Header } from '../components/home/Header/index';
 
-import { SearchBox } from '../components/dashboard/SearchBox';
-import { Banner } from '../components/dashboard/Banner';
-import { CarsCarousel } from '../components/dashboard/CarsCarousel';
+import { SearchBox } from '../components/home/SearchBox';
+import { Banner } from '../components/home/Banner';
+import { CarsCarousel } from '../components/home/CarsCarousel';
 
 import 'react-multi-carousel/lib/styles.css';
 
