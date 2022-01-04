@@ -23,7 +23,9 @@ export function SearchBox(){
             placeholder="Search in US Cars Shop"
             color="black.900"
           />
-          <InputRightElement children={<SearchIcon h="40px"/>}/>
+          <InputRightElement >
+            <SearchIcon  />
+          </InputRightElement>
         </InputGroup>
       </Flex>
     </Flex>

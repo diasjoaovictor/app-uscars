@@ -17,7 +17,7 @@ export function CarsCarousel(){
     const [cars, setCars] = useState<CarsProps[]>([])
     useEffect(() => {
       let carsArray = [];
-      for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={`${i}`} carImage={carAvatar.src}/>);
+      for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={i} carImage={carAvatar.src}/>);
       setCars(carsArray);
 
     }, [])

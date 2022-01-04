@@ -61,7 +61,7 @@ export function LoginPage(){
               borderBottom="10px"
               bgColor="#fff"
               >
-              <Image pt={5} h="150%"  src={blue_logo.src} />
+              <Image pt={5} h="150%" alt="logo"  src={blue_logo.src} />
             </Center>
             <Center
               pt={30}
@@ -111,9 +111,10 @@ export function LoginPage(){
                       />
                         <InputRightElement
                           onClick={() => changeVisibility()}
-                          children={visible}
                           cursor="pointer"
-                        />
+                        >
+                          {visible}
+                        </InputRightElement>
                     <Center
                       padding="1%"
                       >
