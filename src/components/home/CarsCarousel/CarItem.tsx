@@ -2,15 +2,15 @@ import { Box, Image, VStack, Text } from '@chakra-ui/react';
 
 interface CarItemProps{
   carImage: string;
-  key: number;
+  category: string
 }
 
-export function CarItem({ carImage, key }: CarItemProps){
+export function CarItem({ carImage, category }: CarItemProps){
   return(
-    <Box flexDirection="row" key={key} pb={10} pl={2} >
-        <VStack name="util_stack">
-          <Image src={carImage} alt="carImage"/>
-          <Text pb={[,,10]}>Text</Text>
+    <Box flexDirection="row" pl={2} >
+        <VStack  spacing="0px">
+          <Image cursor="pointer" src={carImage} alt="carImage"/>
+          <Text fontSize="2vh" cursor="pointer" pb={["100px",,10]}>{category}</Text>
         </VStack>
     </Box>
   )

@@ -43,9 +43,8 @@ export function Menu(){
               <Image src={logo.src} alt="logo"/>
               {isWideVersion && (
                 <>
-                  <Text color="white.200" >Menu</Text>
-                  <Text color="white.200" >Menu</Text>
-                  <Text color="white.200" >Menu</Text>
+                  <Text color="white.200" cursor="pointer" >Shop</Text>
+                  <Text color="white.200" cursor="pointer" >Sell/Trade</Text>
                 </>
               )}
             </HStack>

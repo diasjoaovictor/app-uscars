@@ -4,7 +4,16 @@ import { useState, useEffect, ReactNode } from 'react';
 import { CarItem } from './CarItem';
 import { Arrows } from './Arrows';
 
-import carAvatar from '../../../../public/car_avatar1.png';
+import convertible from '../../../../public/avatars/convertible.svg';
+import coupe from '../../../../public/avatars/coupe.svg';
+import electricHybrid from '../../../../public/avatars/electric-hybrid.svg';
+import hatchback from '../../../../public/avatars/hatchback.svg';
+import luxury from '../../../../public/avatars/luxury.svg';
+import pickup from '../../../../public/avatars/pickup.svg';
+import sedan from '../../../../public/avatars/sedan.svg';
+import suv from '../../../../public/avatars/suv.svg';
+import van from '../../../../public/avatars/van.svg';
+import wagon from '../../../../public/avatars/wagon.svg';
 
 import "react-multi-carousel/lib/styles.css";
 import  styles from   './Home.module.css';
@@ -16,8 +25,19 @@ interface CarsProps{
 export function CarsCarousel(){
     const [cars, setCars] = useState<CarsProps[]>([])
     useEffect(() => {
+
       let carsArray = [];
-      for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={i} carImage={carAvatar.src}/>);
+      // for(let i = 0; i < 12; i++) carsArray.push(<CarItem key={i} carImage={carAvatar.src}/>);
+      carsArray.push(<CarItem category="Convertible" carImage={convertible.src}/>);
+      carsArray.push(<CarItem category="Coupe" carImage={coupe.src}/>);
+      carsArray.push(<CarItem category="Clectric-hybrid" carImage={electricHybrid.src}/>);
+      carsArray.push(<CarItem category="Hatchback" carImage={hatchback.src}/>);
+      carsArray.push(<CarItem category="Luxury" carImage={luxury.src}/>);
+      carsArray.push(<CarItem category="Pickup" carImage={pickup.src}/>);
+      carsArray.push(<CarItem category="Sedan" carImage={sedan.src}/>);
+      carsArray.push(<CarItem category="Suv" carImage={suv.src}/>);
+      carsArray.push(<CarItem category="Van" carImage={van.src}/>);
+      carsArray.push(<CarItem category="Wagon" carImage={wagon.src}/>);
       setCars(carsArray);
 
     }, [])
@@ -33,7 +53,7 @@ export function CarsCarousel(){
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 10
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },

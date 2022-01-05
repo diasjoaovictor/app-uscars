@@ -5,7 +5,7 @@ export function Banner(){
   return(
     <Flex
       w="100%"
-      h={["100px", "150px", "250px", "300px","500px"]}
+      h={["100px", "150px", "250px", "300px","450px"]}
       justifyContent="center"
     >
       <Box
