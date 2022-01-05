@@ -157,7 +157,7 @@ export function LoginPage(){
                                 fontSize="20px"
                                 fontFamily="Ubuntu"
                                 >
-                                ou
+                                or
                               </Text>
                               <Divider
                                 orientation='horizontal'
