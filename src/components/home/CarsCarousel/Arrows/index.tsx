@@ -25,7 +25,9 @@ export const Arrows = ({ classProps, onClick}: ArrowsProps) => {
         onMouseEnter={() => setIsMouseEnterActive(!isMouseEnterActive)}
         onMouseOut={() => setIsMouseEnterActive(!isMouseEnterActive)}
         backgroundColor={ isMouseEnterActive ? "#00008B !important" : "#add8e6 !important" }
-
+        __css={{
+          transition: "background-color 0.7s"
+        }}
         className={classProps}
       />
   )
