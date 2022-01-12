@@ -21,7 +21,7 @@ export function Header(){
         <DrawerOverlay>
           <DrawerContent bg="gray.800" p="4">
             <DrawerCloseButton color="white.200" mt="6"/>
-            <DrawerHeader>chave</DrawerHeader>
+            <DrawerHeader></DrawerHeader>
             <DrawerBody>
             <ResponsiveMenuVersion />
             </DrawerBody>
