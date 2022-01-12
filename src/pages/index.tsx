@@ -1,49 +1,22 @@
-import { Flex, Stack, Input, Button } from '@chakra-ui/react';
-import router from 'next/router';
+import {  Stack as ContainerStack } from '@chakra-ui/react';
+import { Header } from '../components/home/Header/index';
 
-export default function Sigin(){
+import { SearchBox } from '../components/home/SearchBox';
+import { Banner } from '../components/home/Banner';
+import { CarsCarousel } from '../components/home/CarsCarousel';
 
-  const redirect = () => {
-    router.push('/dashboard');
-  }
-  return(
-    <Flex
-      width="100vm"
-      h="100vh"
-      align="center"
-      justify="center"
-
-    >
-      <Flex
-        as="form"
-        width="100%"
-        maxWidth={360}
-        p="8"
-        borderRadius={8}
-        flexDir="column"
-      >
-      <Stack spacing="4">
-        <Input
-         name="txtEmail"
-         label="E-mail"
-         type="email"
-          />
-        <Input
-         name="txtSenha"
-         label="Senha"
-         type="password"
-         />
-      </Stack>
-
-      <Button
-       mt="6"
-       colorScheme="pink"
-       size="lg"
-       onClick={() => redirect()}
-       >Ir para Dashboard</Button>
-      </Flex>
+import 'react-multi-carousel/lib/styles.css';
 
 
-    </Flex>
+export default function Dashboard(){
+
+
+  return (
+    <ContainerStack  spacing={10}>
+      <Header />
+      <SearchBox />
+      <Banner />
+      <CarsCarousel />
+    </ContainerStack>
   )
 }

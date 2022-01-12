@@ -1,11 +1,10 @@
 import { Flex, HStack, Image, Text, useBreakpointValue, IconButton, Icon } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';
-import { useSidebarDrawer } from '../../hooks/useSidebar';
+import { useSidebarDrawer } from '../../../hooks/useSidebar';
 
-import logo from '../../../public/logo.svg';
-import profile from '../../../public/profile.svg';
-import exit from '../../../public/exit.svg';
-
+import logo from '../../../../public/logo.svg';
+import profile from '../../../../public/profile.svg';
+import exit from '../../../../public/exit.svg';
 
 export function Menu(){
   const { onOpen } = useSidebarDrawer();
@@ -13,9 +12,6 @@ export function Menu(){
     base: false,
     lg: true
   })
-
-
-
 
   return(
 
@@ -47,9 +43,8 @@ export function Menu(){
               <Image src={logo.src} alt="logo"/>
               {isWideVersion && (
                 <>
-                  <Text color="white.200" >Menu</Text>
-                  <Text color="white.200" >Menu</Text>
-                  <Text color="white.200" >Menu</Text>
+                  <Text color="white.200" cursor="pointer" >Shop</Text>
+                  <Text color="white.200" cursor="pointer" >Sell/Trade</Text>
                 </>
               )}
             </HStack>

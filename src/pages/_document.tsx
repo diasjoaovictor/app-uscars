@@ -18,6 +18,11 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@400;600;700&family=Poppins&family=Ubuntu:wght@300&display=swap"
+            rel="stylesheet" 
+          />
+
           </Head>
           <body>
             <Main />

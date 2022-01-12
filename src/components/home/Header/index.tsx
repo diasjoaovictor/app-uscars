@@ -1,5 +1,5 @@
-import { useSidebarDrawer } from '../../hooks/useSidebar';
-import { Box, DrawerHeader, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, Drawer, useBreakpointValue } from '@chakra-ui/react';
+import { useSidebarDrawer } from '../../../hooks/useSidebar';
+import { DrawerHeader, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, Drawer, useBreakpointValue } from '@chakra-ui/react';
 import { Menu } from '../Menu/index';
 import { ResponsiveMenuVersion } from '../Menu/ResponsiveMenuVersion';
 
@@ -9,7 +9,6 @@ export function Header(){
     base: false,
     lg: true
   })
-  /********************************************/
   if(isDrawSidebar){
      return(
        <Menu />
@@ -22,7 +21,7 @@ export function Header(){
         <DrawerOverlay>
           <DrawerContent bg="gray.800" p="4">
             <DrawerCloseButton color="white.200" mt="6"/>
-            <DrawerHeader>chave</DrawerHeader>
+            <DrawerHeader></DrawerHeader>
             <DrawerBody>
             <ResponsiveMenuVersion />
             </DrawerBody>

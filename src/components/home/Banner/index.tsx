@@ -1,11 +1,11 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
-import car from '../../../public/car.png';
+import car from '../../../../public/car.png';
 
 export function Banner(){
   return(
     <Flex
       w="100%"
-      h={["100px", "150px", "250px", "300px","500px"]}
+      h={["100px", "150px", "250px", "300px","450px"]}
       justifyContent="center"
     >
       <Box
@@ -15,7 +15,7 @@ export function Banner(){
         bg={`url("${car.src}")`}
         justifyContent="center"
         bgSize="100%"
-        maxW="1400px"
+        maxW="2000px"
         maxH="100%"
         backgroundRepeat="no-repeat"
 

@@ -20,6 +20,7 @@ export const theme = extendTheme({
   fonts: {
      heading: 'Bree Serif',
      body: 'Bree Serif',
+     login: 'Ubuntu'
   },
   global: {
     body: {
